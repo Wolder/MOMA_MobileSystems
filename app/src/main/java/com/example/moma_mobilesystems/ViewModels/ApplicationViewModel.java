@@ -27,7 +27,7 @@ public class ApplicationViewModel extends ViewModel {
     private MutableLiveData<ApplicationModel[]> liveApplicationList;
     private ApplicationModel[] applicationArray;
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public LiveData<ApplicationModel[]> getApplicationList(Context context) {
         if (liveApplicationList == null) {
             applicationArray = getPackages(context);
@@ -41,7 +41,7 @@ public class ApplicationViewModel extends ViewModel {
         return liveApplicationList;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void initNetworkTrafficInfo(Context context) {
         NetworkStatsManager networkStatsManager = (NetworkStatsManager) context.getSystemService(Context.NETWORK_STATS_SERVICE);
         NetworkHelper networkHelper = new NetworkHelper(networkStatsManager);
@@ -66,7 +66,7 @@ public class ApplicationViewModel extends ViewModel {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void updateApplicationList(Context context) {
         NetworkStatsManager networkStatsManager = (NetworkStatsManager) context.getSystemService(Context.NETWORK_STATS_SERVICE);
         NetworkHelper networkHelper = new NetworkHelper(networkStatsManager);

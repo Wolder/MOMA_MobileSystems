@@ -19,7 +19,7 @@ public class NetworkHelper {
         this.networkStatsManager = networkStatsManager;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public long getAllRxBytesMobile(Context context, long startTime) {
         NetworkStats.Bucket bucket;
         try {
@@ -33,7 +33,7 @@ public class NetworkHelper {
         return bucket.getRxBytes();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public long getAllTxBytesMobile(Context context, long startTime) {
         NetworkStats.Bucket bucket;
         try {
@@ -47,7 +47,7 @@ public class NetworkHelper {
         return bucket.getTxBytes();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public long getAllRxBytesWifi(long startTime) {
         NetworkStats.Bucket bucket;
         try {
@@ -61,7 +61,7 @@ public class NetworkHelper {
         return bucket.getRxBytes();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public long getAllTxBytesWifi(long startTime) {
         NetworkStats.Bucket bucket;
         try {
@@ -75,7 +75,7 @@ public class NetworkHelper {
         return bucket.getTxBytes();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public long getPackageRxBytesMobile(Context context, long startTime, int packageUID) {
         NetworkStats networkStats = null;
         networkStats = networkStatsManager.queryDetailsForUid(
@@ -95,7 +95,7 @@ public class NetworkHelper {
         return rxBytes;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public long getPackageTxBytesMobile(Context context, long startTime, int packageUID) {
         NetworkStats networkStats = null;
         networkStats = networkStatsManager.queryDetailsForUid(
@@ -115,7 +115,7 @@ public class NetworkHelper {
         return txBytes;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public long getPackageRxBytesWifi(long startTime, int packageUID) {
         NetworkStats networkStats = null;
         networkStats = networkStatsManager.queryDetailsForUid(
@@ -135,7 +135,7 @@ public class NetworkHelper {
         return rxBytes;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public long getPackageTxBytesWifi(long startTime, int packageUID) {
         NetworkStats networkStats = null;
         networkStats = networkStatsManager.queryDetailsForUid(

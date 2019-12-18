@@ -25,9 +25,7 @@ public class AppsFragment extends Fragment {
     private RecyclerView recyclerView;
     private final String TAG = "AppsFragment: ";
 
-
-
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View root = inflater.inflate(R.layout.fragment_apps, container, false);
         final ApplicationViewModel model = ViewModelProviders.of(this).get(ApplicationViewModel.class);

@@ -42,7 +42,7 @@ public class ApplicationModel {
 
 
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void setCurrentNetworkTraffic(Context context, NetworkHelper networkHelper) {
         long totalWifiDataRx = networkHelper.getPackageRxBytesWifi(0, UID);
         long totalMobileDataRx = networkHelper.getPackageRxBytesMobile(context, 0, UID);
@@ -53,7 +53,7 @@ public class ApplicationModel {
         networkTransmitTotal = totalMobileDataTx + totalWifiDataTx;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void setTotalNetworkTraffic(Context context, NetworkHelper networkHelper) {
         long currentWifiDataRx = networkHelper.getPackageRxBytesWifi(0, UID);
         long currentMobileDataRx = networkHelper.getPackageRxBytesMobile(context,0, UID);
