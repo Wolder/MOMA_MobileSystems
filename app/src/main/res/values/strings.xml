@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MOMA_MobileSystems</string>
+    <string name="action_settings">Settings</string>
+    <string name="recent" >Recent</string>
+    <string name="favorites" >Favorites</string>
+    <string name="title_app">Applications</string>
+    <string name="title_chart">Charts</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">DashBoard</string>
+
+</resources>
